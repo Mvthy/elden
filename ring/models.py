@@ -10,11 +10,23 @@ class Nav(models.Model):
 
 # tabla servicios
 class Servicio(models.Model):
-    id_servicio = models.AutoField(db_column='idServicios', primary_key=True)
+    id_servicio = models.AutoField(db_column='id_Servicios', primary_key=True)
     titulo_servicio = models.CharField(max_length=50, blank=False, null=False)
     descripcion_servicio = models.CharField(max_length=1000, blank=False, null=False)
     precio = models.CharField(max_length=45)
 
     def __str__(self):
         return str(self.titulo_servicio)
+
+# tabla QuieneSomos    
+class Quienesomo(models.Model):
+    id_quienesomos = models.AutoField(db_column='idQuienesomos', primary_key=True)
+    titulo_quienesomos = models.CharField(max_length=50, blank=False, null=False)
+    descripcion_quienesomos = models.CharField(max_length=1000, blank=False, null=False)
+
+    def str(self):
+        return str(self.titulo_quienesomos)
+
+    class Meta:
+        db_table = 'Quienes_somos'
         

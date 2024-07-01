@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from .models import Nav, Servicio, QuieneSomos
+from .models import Nav, Servicio, Quienesomo
+from ring.models import *
 
 # Create your views here.
 def Home(request):
@@ -13,8 +14,8 @@ def Servicios(request):
     context = {'navbar':navbar, 'servicio':servicios}
     return render(request, 'ring/Servicios.html', context)
 
-def QuienesSomos(request):
+def QuieneSomos(request):
     navbar = Nav.objects.all()
-    nosotros =  QuieneSomos.objects.all()
+    nosotros = Quienesomo.objects.all()
     context = {'navbar':navbar, 'nosotros':nosotros}
     return render(request, 'ring/QuienesSomos.html', context)

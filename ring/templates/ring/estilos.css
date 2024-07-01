@@ -1,0 +1,29 @@
+body{
+    background-color: #00354E;
+  }
+  nav{
+    margin-bottom: 50px;
+  }
+  .container{
+    margin-top: 50px;
+    margin-bottom: 50px;
+  
+    padding: 10px;
+  }
+.borde{
+    color:black ;
+    background-color:lightcyan;
+    padding: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', 'sans-serif';
+    border-radius: 40px;
+    margin-bottom: 100px;
+}
+h1,h2{
+    font-size: 15px;
+    color: black;
+    text-shadow: 
+        -1px -1px 0 white;
+}
+p{
+    color: black;
+}
