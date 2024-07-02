@@ -1,29 +1,39 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+    <title>Home</title> 
 </head>
 <body>
 
-  
+  <!----------{% static 'img/nombre_imagen.jpg/png/web' %]----------->
+<!------En caso de no les llame el estilo, cierran server, eliminan cache, vuelven a correr server, yera----->  
     
     <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a href="Home.html"> </a><img src="data:image/jpeg;base64,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" alt="" width="60" height="60" class="custom-logo" alt="nombre">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-level="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link " href="Home/">Home</a>
-        <a class="nav-link " href="QuienesSomos/">Quienes somos</a>
-        <a class="nav-link " href="Servicios/">Servicios</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">InnovateNow</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          {% if navbar %}
+              {% for nav in navbar %}    
+              <li class="nav-item">
+                  <a class="nav-link" href="{{nav.url_nav}}">{{nav.nombre_nav}}</a>
+              </li>
+              {% endfor %}
+          {% endif %}
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
   
   <!-- Mensaje principal -->
@@ -32,7 +42,7 @@
       <div class="row">  
           <h1 class="my-5" style="font-size: 500%; text-shadow: -3px -3px 0 white; color: black;">El capital es lo necesario para resolver los mayores 
           problemas del mundo a traves de startups
-          </h1>
+          </h1>''
       </div>
     </div>
    </div>
